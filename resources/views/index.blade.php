@@ -32,7 +32,8 @@
     </div> {{-- end filters --}}
 
     <div class="ideas-container space-y-6 my-6">
-        <div class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
+        <div
+            class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
@@ -105,7 +106,8 @@
             </div>
         </div> {{-- end idea-container --}}
 
-        <div class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
+        <div
+            class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl text-blue">66</div>
@@ -178,7 +180,8 @@
             </div>
         </div> {{-- end idea-container --}}
 
-        <div class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
+        <div
+            class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">32</div>
@@ -251,7 +254,8 @@
             </div>
         </div> {{-- end idea-container --}}
 
-        <div class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
+        <div
+            class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">22</div>
@@ -267,7 +271,7 @@
             </div>
             <div class="flex px-2 py-6">
                 <a href="#" class="flex-shrink-0">
-                    <img src="https://source.unsplash.com/200x200/?face=4" alt="avatar" class="w-14 h-14 rounded-xl">
+                    <img src="https://source.unsplash.com/200x200/?face=8" alt="avatar" class="w-14 h-14 rounded-xl">
                 </a>
                 <div class="mx-4">
                     <h4 class="text-xl font-semibold">
@@ -324,7 +328,8 @@
             </div>
         </div> {{-- end idea-container --}}
 
-        <div class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
+        <div
+            class="idea-container hover:shadow-card cursor-pointer transition duration-150 ease-in bg-white rounded-xl flex">
             <div class="border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">2</div>
@@ -340,7 +345,7 @@
             </div>
             <div class="flex px-2 py-6">
                 <a href="#" class="flex-shrink-0">
-                    <img src="https://source.unsplash.com/200x200/?face=4" alt="avatar" class="w-14 h-14 rounded-xl">
+                    <img src="https://source.unsplash.com/200x200/?face=6" alt="avatar" class="w-14 h-14 rounded-xl">
                 </a>
                 <div class="mx-4">
                     <h4 class="text-xl font-semibold">
