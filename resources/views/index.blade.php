@@ -47,27 +47,22 @@
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="#" class="flex-shrink-0">
-                    <img src="https://source.unsplash.com/200x200/?face&v=1" alt="avatar" class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img src="https://source.unsplash.com/200x200/?face&v=1" alt="avatar"
+                             class="w-14 h-14 rounded-xl">
+                    </a>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">A random title go here</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, harum laborum. A accusantium
-                        alias consequuntur, dolore earum explicabo fugit ipsam, ipsum laudantium non quisquam rerum
-                        soluta voluptas! Accusantium aliquam aut cum deleniti dolores eaque, eos exercitationem fugiat
-                        illo in, iure laudantium molestias natus nostrum officiis omnis optio perferendis placeat
-                        quaerat quibusdam recusandae reiciendis repudiandae saepe sed temporibus vel voluptates
-                        voluptatum. A autem consequatur delectus, doloribus fuga illum ipsam iusto laborum molestias
-                        mollitia necessitatibus nisi odio praesentium quis tempora unde vel, veritatis? Aspernatur
-                        exercitationem libero magnam quia voluptates. A animi autem corporis, fugiat iusto nam
-                        necessitatibus, officia officiis porro quam, similique.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </div>
                     <div class="flex items-center justify-between mt-6">
-                        <div class="flex items-center .text-xs text-gray-400 font-semibold space-x-2">
+                        <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
                             <div>Category 1</div>
@@ -81,7 +76,7 @@
                                 Open
                             </div>
                             <button
-                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3 flex items-center">
+                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full border h-7 transition duration-150 ease-in py-2 px-3 flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                      stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -141,7 +136,7 @@
                         necessitatibus, officia officiis porro quam, similique.
                     </div>
                     <div class="flex items-center justify-between mt-6">
-                        <div class="flex items-center .text-xs text-gray-400 font-semibold space-x-2">
+                        <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
                             <div>Category 1</div>
@@ -215,7 +210,7 @@
                         necessitatibus, officia officiis porro quam, similique.
                     </div>
                     <div class="flex items-center justify-between mt-6">
-                        <div class="flex items-center .text-xs text-gray-400 font-semibold space-x-2">
+                        <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
                             <div>Category 1</div>
@@ -289,7 +284,7 @@
                         necessitatibus, officia officiis porro quam, similique.
                     </div>
                     <div class="flex items-center justify-between mt-6">
-                        <div class="flex items-center .text-xs text-gray-400 font-semibold space-x-2">
+                        <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
                             <div>Category 1</div>
@@ -363,7 +358,7 @@
                         necessitatibus, officia officiis porro quam, similique.
                     </div>
                     <div class="flex items-center justify-between mt-6">
-                        <div class="flex items-center .text-xs text-gray-400 font-semibold space-x-2">
+                        <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
                             <div>Category 1</div>
