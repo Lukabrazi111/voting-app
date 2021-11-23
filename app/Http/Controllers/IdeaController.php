@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreIdeaRequest;
 use App\Http\Requests\UpdateIdeaRequest;
 use App\Models\Idea;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Response;
 
 class IdeaController extends Controller
@@ -16,7 +19,8 @@ class IdeaController extends Controller
     public function index()
     {
         return view('idea.index', [
-            'ideas' => Idea::simplePaginate(Idea::PAGINATION_COUNT),
+            'ideas' => Idea::with('user', 'category')
+                ->simplePaginate(Idea::PAGINATION_COUNT),
         ]);
     }
 
@@ -45,7 +49,7 @@ class IdeaController extends Controller
      * Display the specified resource.
      *
      * @param Idea $idea
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|Response
+     * @return Application|Factory|View|Response
      */
     public function show(Idea $idea)
     {
