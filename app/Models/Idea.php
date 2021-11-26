@@ -81,8 +81,6 @@ class Idea extends Model
         } else {
             throw new VoteNotFoundException();
         }
-//            ->delete();
-
     }
 
 }
