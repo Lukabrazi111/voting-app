@@ -16,12 +16,14 @@
         <div class="mt-8">
             @if($hasVoted)
                 <button
-                    class="w-20 bg-blue text-white border border-blue hover:bg-blue-hover transition duration-150 ease-in
+                    wire:click.prevent="vote"
+                    class="w-20 bg-blue border border-blue text-white hover:bg-blue-hover transition duration-150 ease-in
                          font-bold text-xss uppercase rounded-xl px-4 py-3">
                     Voted
                 </button>
-            @else
+                @else
                 <button
+                    wire:click.prevent="vote"
                     class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400 transition duration-150 ease-in
                          font-bold text-xss uppercase rounded-xl px-4 py-3">
                     Vote
@@ -95,10 +97,21 @@
                         <div class="text-sm font-bold leading-none">{{ $votesCount }}</div>
                         <div class="text-xss font-semibold leading-none text-gray-400">Votes</div>
                     </div>
-                    <button class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400 transition duration-150 ease-in
+                    @if($hasVoted)
+                        <button
+                            wire:click.prevent="vote"
+                            class="w-20 bg-blue text-white border border-gray-200 hover:bg-blue-hover transition duration-150 ease-in
                                 font-bold text-xss uppercase rounded-xl px-4 py-3 -mx-5">
-                        Vote
-                    </button>
+                            Voted
+                        </button>
+                    @else
+                        <button
+                            wire:click.prevent="vote"
+                            class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400 transition duration-150 ease-in
+                                font-bold text-xss uppercase rounded-xl px-4 py-3 -mx-5">
+                            Vote
+                        </button>
+                    @endif
                 </div>
             </div>
         </div>
