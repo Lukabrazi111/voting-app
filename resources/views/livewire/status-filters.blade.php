@@ -1,8 +1,7 @@
 <nav class="hidden md:flex flex items-center text-gray-400 justify-between text-xs">
     <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
         <li><a wire:click.prevent="setStatus('All')" href="#"
-               class="border-b-4 pb-3 @if($status === 'All') border-blue text-gray-900 @endif transition duration-150 hover:border-blue">All
-                Ideas ({{ $statusCount['all_statuses'] }})</a></li>
+               class="border-b-4 pb-3 @if($status === 'All') border-blue text-gray-900 @endif transition duration-150 hover:border-blue">All Ideas ({{ $statusCount['all_statuses'] }})</a></li>
 
         <li><a wire:click.prevent="setStatus('Considering')" href="#"
                class="@if($status === 'Considering') border-blue text-gray-900 @endif transition duration-150 ease-in border-b-4 pb-3
