@@ -9,6 +9,7 @@ use Livewire\Component;
 
 class IdeaIndex extends Component
 {
+
     public $idea;
     public $votesCount;
     public $hasVoted;
