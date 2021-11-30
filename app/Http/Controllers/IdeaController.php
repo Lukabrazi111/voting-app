@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreIdeaRequest;
 use App\Http\Requests\UpdateIdeaRequest;
 use App\Models\Idea;
-use App\Models\Vote;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -54,6 +53,9 @@ class IdeaController extends Controller
         return view('idea.show', [
             'idea' => $idea,
             'votesCount' => $idea->votes()->count(),
+            'backUrl' => url()->previous() !== url()->full()
+                ? url()->previous()
+                : route('idea.index'),
         ]);
     }
 
