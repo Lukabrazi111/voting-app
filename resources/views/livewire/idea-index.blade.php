@@ -63,33 +63,7 @@
                                 leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                         {{ $idea->status->name }}
                     </div>
-                    <button
-                        x-on:click="isOpen = !isOpen"
-                        class="relative bg-gray-100 hover:bg-gray-200 rounded-full border h-7 transition duration-150 ease-in py-2 px-3 flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                             viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/>
-                        </svg>
-                        <ul
-                            x-cloak
-                            x-show="isOpen" x-transition.origin.top
-                            @click.outside="isOpen = false"
-                            @keydown.esc.window="isOpen = false"
-                            class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 top-5 md:ml-8 top-8 md:top-6 right-0 md:left-0">
-                            <li>
-                                <a href="#"
-                                   class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Mark
-                                    as Spam</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                   class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete
-                                    Post</a>
-                            </li>
-                        </ul>
-                    </button>
+
                 </div>
 
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
