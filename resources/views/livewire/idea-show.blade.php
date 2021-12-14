@@ -1,5 +1,4 @@
 <div class="idea-and-buttons container">
-
     <div class="idea-container bg-white rounded-xl flex mt-4">
         <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
             <div class="flex-shrink-0 mx-2">
@@ -50,8 +49,13 @@
                                 @keydown.esc.window="isOpen = false"
                                 class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 top-5 z-10 ml-6 md:ml-8 top-8 md:top-6 right-0 md:left-0">
                                 <li>
-                                    <a href="#"
-                                       class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit
+                                    <a
+                                        @click="
+                                        isOpen = false
+                                        $dispatch('custom-show-edit-modal')
+                                        "
+                                        href="#"
+                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit
                                         Idea</a>
                                 </li>
                                 <li>
