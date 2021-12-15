@@ -73,7 +73,7 @@ class User extends Authenticatable
             'andre_madaran@hotmail.com',
             'andrian@laracasts.com',
             'lukakhangoshvili@gmail.com',
-            'lukabrazi@redberry.ge'
+            'lukabrazi@redberry.ge',
         ]);
     }
 }
