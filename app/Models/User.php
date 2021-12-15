@@ -72,7 +72,8 @@ class User extends Authenticatable
             'jeffrey@laracasts.com',
             'andre_madaran@hotmail.com',
             'andrian@laracasts.com',
-            'lukakhangoshvili@gmail.com'
+            'lukakhangoshvili@gmail.com',
+            'lukabrazi@redberry.ge'
         ]);
     }
 }

@@ -45,7 +45,6 @@ class EditIdea extends Component
         $this->emit('ideaWasUpdated');
     }
 
-
     public function render()
     {
         return view('livewire.edit-idea', [
