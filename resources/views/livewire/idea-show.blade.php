@@ -48,16 +48,18 @@
                                 @click.outside="isOpen = false"
                                 @keydown.esc.window="isOpen = false"
                                 class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 top-5 z-10 ml-6 md:ml-8 top-8 md:top-6 right-0 md:left-0">
-                                <li>
-                                    <a
-                                        @click="
+                                @can('update', $idea)
+                                    <li>
+                                        <a
+                                            @click="
                                         isOpen = false
                                         $dispatch('custom-show-edit-modal')
                                         "
-                                        href="#"
-                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit
-                                        Idea</a>
-                                </li>
+                                            href="#"
+                                            class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit
+                                            Idea</a>
+                                    </li>
+                                @endcan
                                 <li>
                                     <a href="#"
                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete

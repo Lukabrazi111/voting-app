@@ -4,6 +4,11 @@
     x-show="isOpen"
     @keydown.esc.window="isOpen = false"
     @custom-show-edit-modal.window="isOpen = true"
+    x-init="
+        window.livewire.on('ideaWasUpdated', () => {
+            isOpen = false;
+        })
+    "
     class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="flex items-end justify-center min-h-screen">
         <div
@@ -16,16 +21,18 @@
                 <button
                     x-on:click="isOpen = false"
                     class="text-gray-400 hover:text-gray-500 transition duration-100 ease-in">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
             </div>
 
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <h3 class="text-center text-lg font-medium text-gray-900">Edit Idea</h3>
-                <p class="text-xs text-center leading-4 text-gray-500 px-6 mt-4">You have one hour to edit your idea from the time you created it.</p>
-                <form wire:submit.prevent="createIdea" action="#" method="POST" class="text-sm space-y-4 px-4 py-6">
+                <p class="text-xs text-center leading-4 text-gray-500 px-6 mt-4">You have one hour to edit your idea
+                    from the time you created it.</p>
+                <form wire:submit.prevent="updateIdea" action="#" method="POST" class="text-sm space-y-4 px-4 py-6">
                     <div>
                         <input wire:model.defer="title" type="text"
                                class="w-full text-sm bg-gray-100 border-none rounded-xl placeholder-gray-900 px-4 py-2"
@@ -38,7 +45,9 @@
                     <div>
                         <select wire:model.defer="category" name="category_add" id="category_add"
                                 class="w-full bg-gray-100 text-sm rounded-xl border-none px-4 py-2">
-                            <option value="1">Category 1</option>
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                     @error('category')
@@ -74,7 +83,7 @@
                         rounded-xl border border-blue hover:bg-blue-hover
                          transition duration-150 ease-in px-6 py-3"
                         >
-                            <span class="ml-1">Submit</span>
+                            <span class="ml-1">Update</span>
                         </button>
                     </div>
                 </form>
