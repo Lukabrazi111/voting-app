@@ -21,7 +21,7 @@
                          font-bold text-xss uppercase rounded-xl px-4 py-3">
                     Voted
                 </button>
-                @else
+            @else
                 <button
                     wire:click.prevent="vote"
                     class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400 transition duration-150 ease-in
@@ -44,6 +44,11 @@
                    class="idea-link hover:underline">{{ $idea->title }}</a>
             </h4>
             <div class="text-gray-600 mt-3 line-clamp-3">
+                @admin
+                    @if($idea->spam_reports > 0)
+                        <div class="text-red mb-2">Spam Reports: {{ $idea->spam_reports }}</div>
+                    @endif
+                @endadmin
                 {{ $idea->description }}
             </div>
             <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
