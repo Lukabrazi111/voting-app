@@ -15,6 +15,9 @@
         :votesCount="$votesCount"
     />
 
+    {{-- Notifications --}}
+    <x-notification-success/>
+
     {{-- Edit idea --}}
     @can('update', $idea)
         <livewire:edit-idea :idea="$idea"/>
