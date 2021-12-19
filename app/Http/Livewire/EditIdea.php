@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Category;
 use App\Models\Idea;
+use App\Models\Status;
 use Livewire\Component;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -42,7 +43,7 @@ class EditIdea extends Component
             'description' => $this->description,
         ]);
 
-        $this->emit('ideaWasUpdated');
+        $this->emit('ideaWasUpdated', 'Idea was updated successfully!');
     }
 
     public function render()
