@@ -31,6 +31,9 @@
         window.livewire.on('ideaWasMarkedAsNotSpam', (message) => {
             showNotification(message)
         })
+        window.livewire.on('commentWasAdded', (message) => {
+            showNotification(message)
+        })
 @endif
         "
     x-show="isOpen"

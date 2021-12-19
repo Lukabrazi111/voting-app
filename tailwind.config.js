@@ -23,6 +23,8 @@ module.exports = {
                 'red': '#ec453f',
                 'red-100': '#fee2e2',
                 'green': '#1aab8b',
+                'green-50': '#f0fdf4',
+                'green-100': '#dcfce7',
                 'purple': '#8b60ed',
             },
             spacing: {
