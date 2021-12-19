@@ -1,6 +1,7 @@
 <div>
     @if($comments->isNotEmpty())
         <div class="comments-container relative space-y-6 pt-4 md:ml-22 my-8 mt-1">
+
             @foreach($comments as $comment)
                 <livewire:idea-comment
                     :key="$comment->id"
@@ -8,7 +9,14 @@
                     :ideaUserId="$idea->user->id"
                 />
             @endforeach
+
+
+
         </div> {{-- end comments-container --}}
+
+        <div class="md:ml-2 my-8">
+            {{ $comments->onEachSide(1)->links() }}
+        </div>
     @else
         <div class="mx-auto w-70 mt-12">
             <img src="{{ asset('img/no-ideas.svg') }}" alt="No Ideas" class="mx-auto mix-blend-luminosity">

@@ -10,12 +10,13 @@
         </div>
 
         <div class="w-full md:w-1/3">
-            <select wire:model="filter" name="other_filters" id="other_filters" class="w-full rounded-xl border-none px-4 py-2">
+            <select wire:model="filter" name="other_filters" id="other_filters"
+                    class="w-full rounded-xl border-none px-4 py-2">
                 <option value="No Filters">No Filters</option>
                 <option value="Top Voted">Top Voted</option>
                 <option value="My Ideas">My Ideas</option>
                 @admin
-                    <option value="Spam Ideas">Spam Ideas</option>
+                <option value="Spam Ideas">Spam Ideas</option>
                 @endadmin
             </select>
         </div>
@@ -50,7 +51,6 @@
     </div> {{-- end ideas-container --}}
 
     <div class="my-8">
-        {{--                {{ $ideas->links() }}--}}
-        {{ $ideas->appends(request()->query())->links() }}
+        {{ $ideas->links() }}
     </div>
 </div>
