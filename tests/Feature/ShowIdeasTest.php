@@ -91,7 +91,7 @@ class ShowIdeasTest extends TestCase
 
         $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
 
-        Idea::factory(Idea::PAGINATION_COUNT + 1)->create([
+        Idea::factory(21)->create([
             'user_id' => $user->id,
             'status_id' => $statusOpen->id,
             'category_id' => $categoryOne->id
