@@ -18,7 +18,7 @@ class IdeaComments extends Component
     public function commentWasAdded()
     {
         $this->idea->refresh();
-        $this->gotoPage($this->idea->comments->load('user')->paginate()->lastPage());
+        $this->gotoPage($this->idea->comments()->paginate()->lastPage());
     }
 
     public function mount(Idea $idea)

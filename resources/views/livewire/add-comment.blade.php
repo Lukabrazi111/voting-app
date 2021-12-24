@@ -1,13 +1,11 @@
 <div
     x-data="{ isOpen:false }"
     x-init="
-
         window.livewire.on('commentWasAdded', () => {
             isOpen = false;
         })
 
         Livewire.hook('message.processed', (message, component) => {
-
             if(message.updateQueue[0].method === 'gotoPage' || message.updateQueue[0].method === 'nextPage'
             || message.updateQueue[0].method === 'previousPage') {
                const firstComment = document.querySelector('.comment-container:first-child');
