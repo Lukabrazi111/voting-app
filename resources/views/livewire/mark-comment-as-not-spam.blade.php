@@ -4,13 +4,13 @@
     x-show="isOpen"
     @keydown.esc.window="isOpen = false"
     x-init="
-        window.livewire.on('commentWasDeleted', () => {
+        window.livewire.on('commentWasMarkedAsNotSpam', () => {
             isOpen = false;
         })
 
-        window.livewire.on('deleteCommentWasSet', () => {
+        window.livewire.on('markAsNotSpamCommentWasSet', () => {
             isOpen = true
-            $nextTick(() => $refs.deleteComment.focus())
+            $nextTick(() => $refs.markNotSpam.focus())
         })
     "
     class="fixed z-20 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -38,11 +38,11 @@
                     </div>
                     <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                            Delete Comment
+                            Reset Comment Spam Counter
                         </h3>
                         <div class="mt-2">
                             <p class="text-sm text-gray-500">
-                                Are you sure you want to delete this comment? This action cannot be undone.
+                                Are you sure you want to mark this comment as NOT spam? This will reset the spam counter to 0.
                             </p>
                         </div>
                     </div>
@@ -50,13 +50,13 @@
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
-                    wire:click="deleteComment"
-                    x-ref="deleteComment"
+                    wire:click="markAsNotSpam"
+                    x-ref="markNotSpam"
                     type="button"
                     class="w-full inline-flex justify-center rounded-md border border-transparent
                      shadow-sm px-4 py-2 bg-blue text-base font-medium text-white hover:bg-blue-hover
                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue sm:ml-3 sm:w-auto sm:text-sm">
-                    Delete Comment
+                    Reset Spam Counter
                 </button>
                 <button
                     x-on:click="isOpen = false"

@@ -40,6 +40,12 @@
         window.livewire.on('commentWasDeleted', (message) => {
             showNotification(message)
         })
+        window.livewire.on('commentWasMarkedAsSpam', (message) => {
+            showNotification(message)
+        })
+        window.livewire.on('commentWasMarkedAsNotSpam', (message) => {
+            showNotification(message)
+        })
 @endif
         "
     x-show="isOpen"

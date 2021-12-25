@@ -8,6 +8,11 @@
         </div>
         <div class="w-full md:mx-4">
             <div class="text-gray-600">
+                @admin
+                @if($comment->spam_reports > 0)
+                    <div class="text-red mb-2">Spam Reports: {{ $comment->spam_reports }}</div>
+                @endif
+                @endadmin
                 {{ $comment->body }}
             </div>
             <div class="flex items-center justify-between mt-6">
@@ -63,14 +68,32 @@
                                             Livewire.emit('setDeleteComment', {{ $comment->id }})
                                                 "
                                             href="#"
-                                            class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete Comment</a>
+                                            class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete
+                                            Comment</a>
                                     </li>
                                 @endcan
+
                                 <li>
-                                    <a href="#"
-                                       class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Mark
+                                    <a
+                                        @click.prevent="
+                                            isOpen = false
+                                            Livewire.emit('setMarkAsSpamComment', {{ $comment->id }})
+                                                "
+                                        href="#"
+                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Mark
                                         as Spam</a>
                                 </li>
+
+                                <li>
+                                    <a
+                                        @click.prevent="
+                                            isOpen = false
+                                            Livewire.emit('setMarkAsNotSpamComment', {{ $comment->id }})
+                                                "
+                                        href="#"
+                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Not Spam</a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
