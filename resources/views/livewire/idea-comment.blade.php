@@ -45,25 +45,31 @@
                                 @can('update', $comment)
                                     <li>
                                         <a
-                                        @click.prevent="
+                                            @click.prevent="
                                             isOpen = false
                                             Livewire.emit('setEditComment', {{ $comment->id }})
-{{--                                            $dispatch('custom-show-edit-modal')--}}
-                                        "
-                                        href="#"
-                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit Comment</a>
+                                                "
+                                            href="#"
+                                            class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Edit
+                                            Comment</a>
                                     </li>
                                 @endcan
 
+                                @can('delete', $comment)
+                                    <li>
+                                        <a
+                                            @click.prevent="
+                                            isOpen = false
+                                            Livewire.emit('setDeleteComment', {{ $comment->id }})
+                                                "
+                                            href="#"
+                                            class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete Comment</a>
+                                    </li>
+                                @endcan
                                 <li>
                                     <a href="#"
                                        class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Mark
                                         as Spam</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="hover:bg-gray-100 px-5 py-3 transition duration-150 ease-in block">Delete
-                                        Post</a>
                                 </li>
                             </ul>
                         </div>
