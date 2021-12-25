@@ -34,6 +34,9 @@
         window.livewire.on('commentWasAdded', (message) => {
             showNotification(message)
         })
+        window.livewire.on('commentWasUpdated', (message) => {
+            showNotification(message)
+        })
 @endif
         "
     x-show="isOpen"

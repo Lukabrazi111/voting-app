@@ -34,5 +34,8 @@
 
     <livewire:mark-idea-as-not-spam :idea="$idea"/>
 
+    @auth
+        <livewire:edit-comment/>
+    @endauth
 
 </x-app-layout>
