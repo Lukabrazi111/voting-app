@@ -17,7 +17,7 @@
         }
       }"
     x-init="
-            @if($redirect)
+        @if($redirect)
         $nextTick(() => {
             showNotification(messageToDisplay)
         });
