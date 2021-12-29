@@ -2,7 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Comment;
+use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Component;
+use Symfony\Component\HttpFoundation\Response;
 
 class CommentNotifications extends Component
 {
@@ -27,6 +30,34 @@ class CommentNotifications extends Component
         if ($this->notificationCount > self::NOTIFICATION_THRESHOLD) {
             $this->notificationCount = self::NOTIFICATION_THRESHOLD . '+';
         }
+    }
+
+    public function markAsRead($notificationId)
+    {
+        if (auth()->guest()) {
+            abort(Response::HTTP_FORBIDDEN);
+        }
+
+        $notification = DatabaseNotification::findOrFail($notificationId);
+        $notification->markAsRead();
+
+        $comment = Comment::find($notification->data['comment_id']);
+
+        session()->flash('scrollToComment', $comment->id);
+
+        return redirect()->route('idea.show', [
+            'idea' => $notification->data['idea_slug'],
+        ]);
+    }
+
+    public function markAllAsRead()
+    {
+        if (auth()->guest()) {
+            abort(Response::HTTP_FORBIDDEN);
+        }
+
+        auth()->user()->unreadNotifications()->markAsRead();
+        $this->getNotifications();
     }
 
     public function getNotifications()

@@ -22,9 +22,8 @@
                setTimeout(() => {
                   lastComment.classList.remove('bg-green-100');
                },4000);
-
             }
-        })
+    })
 "
     class="relative">
     <button

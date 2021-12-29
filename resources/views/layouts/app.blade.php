@@ -36,7 +36,7 @@
                             </a>
                         </form>
 
-                        <livewire:comment-notifications />
+                        <livewire:comment-notifications/>
                     </div>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
@@ -113,6 +113,13 @@
 
 @if(session('success_message'))
     <x-notification-success :redirect="true" messageToDisplay="{{ session('success_message') }}"/>
+@endif
+
+
+@if(session('scrollToComment'))
+    <div class="text-center">
+        {{ session('scrollToComment') }}
+    </div>
 @endif
 
 @livewireScripts
